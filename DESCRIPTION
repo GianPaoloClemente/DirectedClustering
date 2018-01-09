@@ -1,0 +1,14 @@
+Package: DirectedClustering
+Type: Package
+Title: Directed Weighted Clustering Coefficient 
+Version: 0.1
+Date: 2018-01-09
+Author: Gian Paolo Clemente[cre,aut], Rosanna Grassi [ctb]
+Maintainer: Gian Paolo Clemente <gianpaolo.clemente@unicatt.it>
+Description: This package allows the computation of clustering coefficients for directed and weighted networks 
+    by using different approaches. It allows to compute clustering coefficients that are not present in igraph package. 
+    A description of clustering coefficients can be found in Directed clustering in weighted networks: a new perspective, Clemente, G.P., Grassi, R. (2017),  	
+    <doi:10.1016/j.chaos.2017.12.007>.
+License: GPL-3
+Depends: R(>= 3.4.0), igraph
+Imports: igraph

@@ -1,0 +1,2 @@
+import(igraph)
+exportPattern("^[[:alpha:]]+")
