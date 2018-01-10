@@ -9,6 +9,7 @@ Description: This package allows the computation of clustering coefficients for 
     by using different approaches. It allows to compute clustering coefficients that are not present in igraph package. 
     A description of clustering coefficients can be found in Directed clustering in weighted networks: a new perspective, Clemente, G.P., Grassi, R. (2017),  	
     <doi:10.1016/j.chaos.2017.12.007>.
-License: GPL-3
-Depends: R(>= 3.4.0), igraph
+License: GPL-3 | file LICENSE
+Depends: R(>= 3.4.0)
 Imports: igraph
+RoxygenNote: 6.0.1

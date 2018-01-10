@@ -1,4 +1,4 @@
-ClustF <- function(mat, type, isolates = "zero", norm = 1) {
+ClustF <- function(mat, type= "undirected", isolates = "zero", norm = 1) {
     if (!is.matrix(mat)) {
         stop("Not a valid matrix object")
     }
