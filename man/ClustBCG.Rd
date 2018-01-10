@@ -66,21 +66,29 @@ Gian Paolo Clemente, gianpaolo.clemente@unicatt.it
 %}
 \examples{
 library(igraph)
-#Weighted and Undirected graphs
-gsim<-erdos.renyi.game(50,0.5, type="gnp",directed = FALSE, loops = FALSE)
-PESI<-runif(length(E(gsim)),0,1)
+#Generate a Weighted and Undirected graph with Erdos Renyi Model
+gsim<-erdos.renyi.game(50, 0.5, type="gnp", directed = FALSE, loops = FALSE)
+PESI<-runif(length(E(gsim)), 0, 1)
 E(gsim)$weight<-PESI
-A<-get.adjacency(gsim,sparse=FALSE,attr="weight")
-BarratClust<-ClustBCG(A,"undirected")
-#Results are the same obtained with transitivity function #(igraph package()
-check<-sum(BarratClust$LocalCC-transitivity(gsim,"weighted"))
 
-#Weighted and Directed Graphs
-gsim<-erdos.renyi.game(50,0.5, type="gnp",directed = TRUE, loops = FALSE)
-PESI<-runif(length(E(gsim)),0,1)
+#Get Adjacency
+A<-get.adjacency(gsim, sparse=FALSE, attr="weight")
+#Compute Barrat et al. (2004) coefficient
+BarratClust<-ClustBCG(A, "undirected")
+
+#The same results can be obtained with igraph::transitivity
+check<-sum(BarratClust$LocalCC-transitivity(gsim, "weighted"))
+
+#Generate a Weighted and Directed Graph with Erdos Renyi Model
+gsim<-erdos.renyi.game(50, 0.5, type="gnp", directed = TRUE, loops = FALSE)
+PESI<-runif(length(E(gsim)), 0, 1)
 E(gsim)$weight<-PESI
-A<-get.adjacency(gsim,sparse=FALSE,attr="weight")
-CGClust<-ClustBCG(A,"directed")
+
+#Get Adjacency
+A<-get.adjacency(gsim, sparse=FALSE, attr="weight")
+
+#Compute Clemente, Grassi (2018) coefficient
+CGClust<-ClustBCG(A, "directed")
 }
 
 % Add one or more standard keywords, see file 'KEYWORDS' in the

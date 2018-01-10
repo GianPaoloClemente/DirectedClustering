@@ -19,3 +19,16 @@ Possibly mis-spelled words in DESCRIPTION:
 
 #Reverse Dependencies
 Reverse Dependencies have been successfully checked.
+
+## Resubmission
+This is a resubmission. As suggested, in this version I have:
+
+* Modified the DESCRIPTION field so that does not begin with "this package" or similar.
+
+* Wrote package names and software names in single quotes in title and description.
+(e.g. 'igraph' in description field).
+ 
+* Enclosed the title "Directed clustering in weighted networks: a new perspective" in double quotes.
+
+* Added blanks in example codes
+* Provided a better description of examples

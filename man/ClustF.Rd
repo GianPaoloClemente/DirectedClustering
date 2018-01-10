@@ -63,19 +63,27 @@ Gian Paolo Clemente, gianpaolo.clemente@unicatt.it
 %}
 \examples{
 library(igraph)
-#Weighted and Undirected graphs
-gsim<-erdos.renyi.game(50,0.5, type="gnp",directed = FALSE, loops = FALSE)
-PESI<-runif(length(E(gsim)),0,1)
+#Generate a Weighted and Undirected graph with Erdos Renyi Model
+gsim<-erdos.renyi.game(50, 0.5, type="gnp", directed = FALSE, loops = FALSE)
+PESI<-runif(length(E(gsim)), 0, 1)
 E(gsim)$weight<-PESI
-A<-get.adjacency(gsim,sparse=FALSE,attr="weight")
-OnnelaClust<-ClustF(A,"undirected")
 
-#Weighted and Directed Graphs
-gsim<-erdos.renyi.game(50,0.5, type="gnp",directed = TRUE, loops = FALSE)
-PESI<-runif(length(E(gsim)),0,1)
+#Get Adjacency
+A<-get.adjacency(gsim, sparse=FALSE, attr="weight")
+
+#Compute Onnela et al. (2005) coefficient
+OnnelaClust<-ClustF(A, "undirected")
+
+#Generate a Weighted and Directed Graph with Erdos Renyi Model
+gsim<-erdos.renyi.game(50, 0.5, type="gnp", directed = TRUE, loops = FALSE)
+PESI<-runif(length(E(gsim)), 0, 1)
 E(gsim)$weight<-PESI
-A<-get.adjacency(gsim,sparse=FALSE,attr="weight")
-FagioloClust<-ClustF(A,"directed")
+
+#Get Adjacency
+A<-get.adjacency(gsim, sparse=FALSE, attr="weight")
+
+#Compute Fagiolo (2007) coefficient
+FagioloClust<-ClustF(A, "directed")
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
