@@ -32,3 +32,14 @@ This is a resubmission. As suggested, in this version I have:
 
 * Added blanks in example codes
 * Provided a better description of examples
+
+## R CMD check results
+
+0 ERRORs | 0 WARNINGs | 0 NOTES.
+
+### R CMD check results on R-devel and R-release
+Possibly mis-spelled words in DESCRIPTION:
+  Clemente (10:123)
+  Grassi (10:139)
+ 
+* None of these are misspelled 
