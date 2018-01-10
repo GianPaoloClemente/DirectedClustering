@@ -1,21 +1,18 @@
 ## Test environments
 
 * local OS X install, R 3.4.2
-* Ubuntu 12.04 (on travis-ci), R-oldrel, R-release, R-devel
-* Windows Server 2012 R2 (x64), R 3.4.2
-* Rhub
-  * Windows Server 2008 R2 SP1, R-devel, 32/64 bit
-  * Debian Linux, R-devel, GCC ASAN/UBSAN
-  * Fedora Linux, R-devel, clang, gfortran
-  * Ubuntu Linux 16.04 LTS, R-release, GCC
-* win-builder (devel and release)
+* Platform: x86_64-w64-mingw32
+* Ubuntu (on Travis CI)
+* R-devel, R-release 
 
 ## R CMD check results
 
 0 ERRORs | 0 WARNINGs | 0 NOTES.
 
+### R CMD check results on R-devel and R-release
+Possibly mis-spelled words in DESCRIPTION:
+  Clemente (10:123)
+  Grassi (10:139)
+  igraph (9:105)
 
-## Downstream dependencies
-
-* We did not run R CMD check as there was a recent release, however we do not
-  anticipate any issues with this change.
+* None of these are misspelled 
