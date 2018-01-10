@@ -1,7 +1,7 @@
 Package: DirectedClustering
 Type: Package
 Title: Directed Weighted Clustering Coefficient 
-Version: 0.1
+Version: 0.1.1
 Date: 2018-01-09
 Author: Gian Paolo Clemente[cre,aut], Rosanna Grassi [ctb]
 Maintainer: Gian Paolo Clemente <gianpaolo.clemente@unicatt.it>
