@@ -16,3 +16,6 @@ Possibly mis-spelled words in DESCRIPTION:
   igraph (9:105)
 
 * None of these are misspelled 
+
+#Reverse Dependencies
+Reverse Dependencies have been successfully checked.
