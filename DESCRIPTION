@@ -10,9 +10,8 @@ Description: Allows the computation of clustering coefficients for directed and 
     A description of clustering coefficients can be found in "Directed clustering in weighted networks: a new perspective", Clemente, G.P., Grassi, R. (2017),  	
     <doi:10.1016/j.chaos.2017.12.007>.
 License: GPL-3 | file LICENSE
-Depends: R(>= 4.4.1)
+Depends: R(>= 4.4.0)
 RoxygenNote: 7.3.2
 Encoding: UTF-8
-Suggests: 
-    testthat (>= 3.0.0)
-Config/testthat/edition: 3
+Suggests:
+    igraph

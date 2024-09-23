@@ -62,6 +62,7 @@ Gian Paolo Clemente, gianpaolo.clemente@unicatt.it
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 %}
 \examples{
+if (requireNamespace("igraph", quietly = TRUE)) {
 library(igraph)
 #Generate a Weighted and Undirected graph with Erdos Renyi Model
 gsim<-sample_gnp(50, 0.5, directed = FALSE, loops = FALSE)
@@ -84,6 +85,10 @@ A<-as_adjacency_matrix(gsim, sparse=FALSE, attr="weight")
 
 #Compute Fagiolo (2007) coefficient
 FagioloClust<-ClustF(A, "directed")
+} else {
+    cat("Please install the 'igraph' package to run this example.\n")
+}
+
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
