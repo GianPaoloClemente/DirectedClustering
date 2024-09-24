@@ -1,16 +1,24 @@
 #' Clustering Coefficients for Directed/Undirected and Weighted Networks
 #'
 #' This function computes both Local and Global (average) Clustering Coefficients for either Directed/Undirected and Unweighted/Weighted Networks.
-#' The formulas are based on Onnela et al. (2005) for undirected networks, and on Fagiolo (2007) for directed networks.
+#' The formulas are based on Onnela et al. (2005) for undirected networks,
+#' and on Fagiolo (2007) for directed networks.
+#'
 #' In the directed case, different components of the directed clustering coefficient are also considered.
 #'
-#' @param mat A weighted adjacency matrix. If weights are greater than one, a normalization is provided by dividing each weight by the maximum weight observed.
-#' @param type The type of clustering coefficient to calculate. Possible values are: \code{"undirected"} (default) or \code{"directed"}.
-#' @param isolates Character scalar, defines how to treat vertices with degree zero and one. If \code{"NaN"}, their local transitivity is reported as NaN and they are not included in the averaging. If \code{"zero"}, their transitivity is reported as 0 and they are included in the averaging. Default is \code{"zero"}.
-#' @param norm If it is 1 (default), the link's weights are normalized by dividing by the maximum observed weight (as proposed by Fagiolo). If it is 0, weights are not normalized. Weights are always normalized when the maximum weight is greater than zero, ensuring that the clustering coefficient ranges between 0 and 1.
+#' @param mat A weighted adjacency matrix. If weights are greater than one,
+#' a normalization is provided by dividing each weight by the maximum weight observed.
+#' @param type The type of clustering coefficient to calculate.
+#' Possible values are: \code{"undirected"} (default) or \code{"directed"}.
+#' @param isolates Character scalar, defines how to treat vertices with degree zero and one.
+#' If \code{"NaN"}, their local transitivity is reported as NaN and they are not included in the averaging.
+#' If \code{"zero"}, their transitivity is reported as 0 and they are included in the averaging. Default is \code{"zero"}.
+#' @param norm If it is 1 (default), the link's weights are normalized by dividing by the maximum observed weight (as proposed by Fagiolo).
+#' If it is 0, weights are not normalized. Weights are always normalized when the maximum weight is greater than zero, ensuring that the clustering coefficient ranges between 0 and 1.
 #'
 #' @details The function computes Onnela et al.'s (2005) formula for weighted and undirected networks.
-#' For directed networks, Fagiolo's (2007) formula is used. In the case of unweighted and undirected graphs, the classical local clustering coefficient (Watts and Strogatz) is provided.
+#' For directed networks, Fagiolo's (2007) formula is used.
+#' In the case of unweighted and undirected graphs, the classical local clustering coefficient (Watts and Strogatz) is provided.
 #' Local coefficients are computed for each node, and the global coefficient is the average of these local coefficients.
 #' These coefficients do not work for graphs with multiple or loop edges, so loops are removed.
 #'

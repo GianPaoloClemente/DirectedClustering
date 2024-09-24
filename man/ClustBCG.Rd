@@ -9,9 +9,11 @@ ClustBCG(mat, type = "undirected", isolates = "zero")
 \arguments{
 \item{mat}{A weighted adjacency matrix.}
 
-\item{type}{The type of clustering coefficient to calculate. Possible values are: \code{"undirected"} (default) or \code{"directed"}.}
+\item{type}{The type of clustering coefficient to calculate.
+Possible values are: \code{"undirected"} (default) or \code{"directed"}.}
 
-\item{isolates}{Character scalar, defines how to treat vertices with degree zero and one. If \code{"NaN"}, their local transitivity is reported as NaN and they are not included in the averaging. If \code{"zero"}, their transitivity is reported as 0 and they are included in the averaging. Default is \code{"zero"}.}
+\item{isolates}{Character scalar, defines how to treat vertices with degree zero and one.
+If \code{"NaN"}, their local transitivity is reported as NaN and they are not included in the averaging. If \code{"zero"}, their transitivity is reported as 0 and they are included in the averaging. Default is \code{"zero"}.}
 }
 \value{
 A list with the following components:
@@ -29,15 +31,20 @@ A list with the following components:
 \item{GlobaltotalCC}{Global Total clustering coefficient for directed networks}
 }
 \description{
-Compute Local and Global (average) Clustering Coefficients for Directed/Undirected and Unweighted/Weighted Networks.
-Formulas are based on Barrat et al. (2004) for undirected networks, and on Clemente and Grassi (2018) for directed networks.
-In the directed case, different components of the directed clustering coefficient are also provided.
+Compute Local and Global (average) Clustering Coefficients
+for Directed/Undirected and Unweighted/Weighted Networks.
 }
 \details{
+Formulas are based on Barrat et al. (2004) for undirected networks,
+and on Clemente and Grassi (2018) for directed networks.
+
+In the directed case, different components of the directed clustering coefficient are also provided.
+
 The function computes the Barrat et al. (2004) coefficient for a weighted and undirected network.
 For a directed network, the Clemente and Grassi (2018) formula is used.
 In case of unweighted and undirected graphs, the classical local clustering coefficient (Watts and Strogatz) is provided.
-Local clustering coefficients are computed for each node, and the global coefficient is the average of these local coefficients.
+Local clustering coefficients are computed for each node,
+and the global coefficient is the average of these local coefficients.
 These coefficients do not work for graphs with multiple or loop edges, hence loops are removed.
 }
 \examples{
@@ -63,11 +70,14 @@ if (requireNamespace("igraph", quietly = TRUE)) {
 
 }
 \references{
-Barrat, A., Barthelemy, M., Pastor-Satorras, R., & Vespignani, A. (2004). The architecture of complex weighted networks. \emph{Proceedings of the National Academy of Sciences}, USA, 101, 3747.
+Barrat, A., Barthelemy, M., Pastor-Satorras, R., & Vespignani, A. (2004). The architecture of complex weighted networks.
+\emph{Proceedings of the National Academy of Sciences}, USA, 101, 3747.
 
-Clemente, G.P., & Grassi, R. (2018). Directed clustering in weighted networks: a new perspective. \emph{Chaos, Solitons and Fractals}, 107, 26–38.
+Clemente, G.P., & Grassi, R. (2018). Directed clustering in weighted networks: a new perspective.
+\emph{Chaos, Solitons and Fractals}, 107, 26–38.
 
-Watts, D.J., & Strogatz, S.H. (1998). Collective dynamics of 'small-world' networks. \emph{Nature}, 393, 440-442.
+Watts, D.J., & Strogatz, S.H. (1998). Collective dynamics of 'small-world' networks.
+\emph{Nature}, 393, 440-442.
 }
 \author{
 Gian Paolo Clemente, \email{gianpaolo.clemente@unicatt.it}
