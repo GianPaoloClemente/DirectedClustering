@@ -4,12 +4,8 @@ Title: Directed Weighted Clustering Coefficient
 Version: 1.0.0
 Date: 2024-09-23
 Authors@R: c(
-  person(given = c("Gian", "Paolo"), family = "Clemente",
-         role = c("cre", "aut"), # cre: maintainer, aut: author
-         email = "gianpaolo.clemente@unicatt.it"),
-  person(given = "Rosanna", family = "Grassi",
-         role = "ctb") # ctb: contributor
-)
+    person("Gian Paolo", "Clemente", email = "gianpaolo.clemente@unicatt.it", role = c("cre", "aut"), comment = c(ORCID = "0000-0001-6795-4595")),
+    person("Rosanna", "Grassi", role = "ctb"))
 Description: Allows the computation of clustering coefficients for directed and weighted networks by using different approaches. 
     It allows to compute clustering coefficients that are not present in 'igraph' package. 
     A description of clustering coefficients can be found in "Directed clustering in weighted networks: a new perspective", Clemente, G.P., Grassi, R. (2017),  	
